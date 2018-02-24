@@ -1,0 +1,27 @@
+.d-inline-flex {
+    margin-right: 5%; 
+    margin-left: 5%; 
+}
+
+img {
+    border-style: solid; 
+    border-width: 1px; 
+    width: 259px; 
+    height: 259px;
+}
+
+h1, h2, .hp {
+    text-align: center; 
+}
+
+.flex-row { 
+    margin-bottom: 1em; 
+}
+
+.btn-primary {
+    margin-left: 33%; 
+}
+
+#gameDetails {
+    margin-right: 1em; 
+}

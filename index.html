@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <title>RPG Game</title>
+</head>
+<body>
+    <div class="container-fluid">
+        <h1>Role Playing Game</h1>
+        <hr> 
+        <br> 
+    </div> 
+    <div class="container d-flex flex-wrap justify-content-center" >
+        <!-- Character list -->
+        <div class="flex-row" id="selectRow">
+            <div class="d-flex flex-wrap selectChar justify-content-around">
+                <div class="container-fluid">
+                <h2 class="align-self-center">Select your character</h2>
+                <hr>
+                </div>
+                <div id="charOne">
+                    <img src="assets/images/charOne.png">
+                    <p class="hp">Health:<span id="charOneHP"></span></p>
+                </div> 
+                <div id="charTwo"> 
+                    <img src="assets/images/charTwo.png">
+                    <p class="hp">Health:<span id="charTwoHP"></span></p>
+                </div>
+                <div id="charThree">
+                    <img src="assets/images/charThree.png">
+                    <p class="hp">Health:<span id="charThreeHP"></span></p>
+                </div>
+                <div id="charFour">
+                <img src="assets/images/charFour.png">
+                <p class="hp">Health:<span id="charFourHP"></span></p>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex flex-row">
+            <div class="flex-column-auto" id="gameDetails">
+                <h2>Game Play</h2>
+                <hr>
+                <p class="logPlayerHit">The player's attack will be appended here.</p>
+                <p class="logEnemyHit">The enemy's counterattack will be appended here.</p>
+                <button type="button" class="btn btn-primary ">Attack!</button>
+            </div>
+            <div class="flex-col" id="protagonist">
+                <h2>Protagonist</h2>
+                <hr> 
+                <!-- Selected character will be appended here dynamically. Placeholder included temp. for formatting -->
+                <div id="protag">
+                    <!-- <img src="assets/images/charFour.png"> -->
+                    <!-- <p class="hp">Health:<span id="playerHP"></span></p> -->
+                </div>
+            </div>
+            <div class="col align-self-center">
+                <span><b>VS</b></span>
+            </div>
+            <div class="flex-col" >
+                <h2>Enemy</h2>
+                <hr>
+                <!-- Selected enemy will be appended here dynamically. char included temp. for formatting -->
+                <div id="enemy">
+                    <!-- <img src="assets/images/charOne.png"> -->
+                    <!-- <p class="hp">Health:<span id="enemyHP"></span></p> -->
+                </div>
+            </div>
+        </div>
+        <div class="flex-row ">
+                <div class="d-flex flex-wrap selectChar justify-content-around" id="enemyQueue">
+                    <div class="container-fluid">
+                        <h2 class="align-self-center">Enemy Queue</h2>
+                        <hr>
+                    </div>
+                    <h2 id="enemyQueueHolder">Your enemies will be listed here.</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery.js"></script>
+<script src="assets/javaScript/game.js"></script>
+</body>
+</html>
