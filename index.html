@@ -15,7 +15,7 @@
         <br> 
     </div> 
     <div class="container d-flex flex-wrap justify-content-center" >
-        <!-- Character list -->
+        <!-- Character list, will be hidden once a character is slected -->
         <div class="flex-row" id="selectRow">
             <div class="d-flex flex-wrap selectChar justify-content-around">
                 <div class="container-fluid">
@@ -23,23 +23,24 @@
                 <hr>
                 </div>
                 <div id="charOne">
-                    <img src="assets/images/charOne.png">
-                    <p class="hp">Health:<span id="charOneHP"></span></p>
+                    <img id="charOneImg" src="assets/images/charOne.png">
+                    <p class="hp">Vitality:<span id="charOneHP"></span></p>
                 </div> 
                 <div id="charTwo"> 
-                    <img src="assets/images/charTwo.png">
-                    <p class="hp">Health:<span id="charTwoHP"></span></p>
+                    <img id="charTwoImg" src="assets/images/charTwo.png">
+                    <p class="hp">Vitality:<span id="charTwoHP"></span></p>
                 </div>
                 <div id="charThree">
-                    <img src="assets/images/charThree.png">
-                    <p class="hp">Health:<span id="charThreeHP"></span></p>
+                    <img id="charThreeImg" src="assets/images/charThree.png">
+                    <p class="hp">Vitality:<span id="charThreeHP"></span></p>
                 </div>
                 <div id="charFour">
-                <img src="assets/images/charFour.png">
-                <p class="hp">Health:<span id="charFourHP"></span></p>
+                <img id="charFourImg" src="assets/images/charFour.png">
+                <p class="hp">Vitality:<span id="charFourHP"></span></p>
                 </div>
             </div>
         </div>
+        <!-- Game play details -->
         <div class="d-flex flex-row">
             <div class="flex-column-auto" id="gameDetails">
                 <h2>Game Play</h2>
@@ -48,35 +49,33 @@
                 <p class="logEnemyHit">The enemy's counterattack will be appended here.</p>
                 <button type="button" class="btn btn-primary ">Attack!</button>
             </div>
+            <!-- Protagonist rendered here when clicked -->
             <div class="flex-col" id="protagonist">
                 <h2>Protagonist</h2>
                 <hr> 
                 <!-- Selected character will be appended here dynamically. Placeholder included temp. for formatting -->
-                <div id="protag">
-                    <!-- <img src="assets/images/charFour.png"> -->
-                    <!-- <p class="hp">Health:<span id="playerHP"></span></p> -->
-                </div>
+                <div id="protag"></div>
             </div>
             <div class="col align-self-center">
                 <span><b>VS</b></span>
             </div>
+            <!-- Opponent rendered here when clicked  -->
             <div class="flex-col" >
-                <h2>Enemy</h2>
+                <h2>Opponent</h2>
                 <hr>
-                <!-- Selected enemy will be appended here dynamically. char included temp. for formatting -->
                 <div id="enemy">
-                    <!-- <img src="assets/images/charOne.png"> -->
-                    <!-- <p class="hp">Health:<span id="enemyHP"></span></p> -->
+                <!-- Selected enemy will be appended here dynamically. char included temp. for formatting -->
                 </div>
             </div>
         </div>
+        <!-- Opponent queue, populated with characters that aren't the protagonist -->
         <div class="flex-row ">
                 <div class="d-flex flex-wrap selectChar justify-content-around" id="enemyQueue">
                     <div class="container-fluid">
-                        <h2 class="align-self-center">Enemy Queue</h2>
+                        <h2 class="align-self-center">Remaining Oppenents</h2>
                         <hr>
                     </div>
-                    <h2 id="enemyQueueHolder">Your enemies will be listed here.</h2>
+                    <h2 id="enemyQueueHolder">Your oppenents will be listed here.</h2>
                 </div>
             </div>
         </div>
