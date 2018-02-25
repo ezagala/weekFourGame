@@ -17,24 +17,24 @@
     <div class="container d-flex flex-wrap justify-content-center" >
         <!-- Character list, will be hidden once a character is slected -->
         <div class="flex-row" id="selectRow">
-            <div class="d-flex flex-wrap selectChar justify-content-around">
+            <div class="d-flex flex-wrap justify-content-around" id="selectChar">
                 <div class="container-fluid">
-                <h2 class="align-self-center">Select your character</h2>
-                <hr>
+                    <h2 class="align-self-center">Select your character</h2>
+                    <hr>
                 </div>
-                <div id="charOne">
+                <div id="charOne" class="char">
                     <img id="charOneImg" src="assets/images/charOne.png">
                     <p class="hp">Vitality:<span id="charOneHP"></span></p>
                 </div> 
-                <div id="charTwo"> 
+                <div id="charTwo" class="char"> 
                     <img id="charTwoImg" src="assets/images/charTwo.png">
                     <p class="hp">Vitality:<span id="charTwoHP"></span></p>
                 </div>
-                <div id="charThree">
+                <div id="charThree" class="char">
                     <img id="charThreeImg" src="assets/images/charThree.png">
                     <p class="hp">Vitality:<span id="charThreeHP"></span></p>
                 </div>
-                <div id="charFour">
+                <div id="charFour" class="char">
                 <img id="charFourImg" src="assets/images/charFour.png">
                 <p class="hp">Vitality:<span id="charFourHP"></span></p>
                 </div>
@@ -47,13 +47,13 @@
                 <hr>
                 <p class="logPlayerHit">The player's attack will be appended here.</p>
                 <p class="logEnemyHit">The enemy's counterattack will be appended here.</p>
-                <button type="button" class="btn btn-primary ">Attack!</button>
+                <button type="button" class="btn btn-primary" id="attack">Attack!</button>
             </div>
             <!-- Protagonist rendered here when clicked -->
             <div class="flex-col" id="protagonist">
                 <h2>Protagonist</h2>
                 <hr> 
-                <!-- Selected character will be appended here dynamically. Placeholder included temp. for formatting -->
+                <!-- Selected character will be appended below dynamically. Placeholder included temp. for formatting -->
                 <div id="protag"></div>
             </div>
             <div class="col align-self-center">
@@ -63,19 +63,20 @@
             <div class="flex-col" >
                 <h2>Opponent</h2>
                 <hr>
-                <div id="enemy">
-                <!-- Selected enemy will be appended here dynamically. char included temp. for formatting -->
-                </div>
+                <!-- Selected enemy will be appended below dynamically. char included temp. for formatting -->
+                <div id="enemy"></div>
             </div>
         </div>
         <!-- Opponent queue, populated with characters that aren't the protagonist -->
-        <div class="flex-row ">
+        <div class="flex-row">
                 <div class="d-flex flex-wrap selectChar justify-content-around" id="enemyQueue">
                     <div class="container-fluid">
                         <h2 class="align-self-center">Remaining Oppenents</h2>
                         <hr>
                     </div>
-                    <h2 id="enemyQueueHolder">Your oppenents will be listed here.</h2>
+                    <div>
+                        <h2 id="enemyQueueHolder">Your oppenents will be listed here.</h2>
+                    </div>
                 </div>
             </div>
         </div>
