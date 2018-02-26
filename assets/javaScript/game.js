@@ -64,7 +64,7 @@ var rpg = {
                             // Move others to enemies queue
                             $("#enemyQueue").append($("#charTwo, #charThree, #charFour"))
                             // Hide select character div and enemy queue placeholder
-                            $("#selectChar, #enemyQueueHolder").css("display", "none")
+                            $("#selectRow, #enemyQueueHolder").hide();
                             // Character html IDs are updated with protagonist IDs
                             $("#charOneHP").attr("id", "protagHP")
                             $("#charOneImg").attr("id", "protagImg")
