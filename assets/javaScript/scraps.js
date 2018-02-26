@@ -74,6 +74,57 @@ var assignProtag = function() {
         }
         assignEnemy(); 
 
+
+        $("#attack").on("click", function() {
+            rpg.enemy = undefined;
+            $("#enemy").children().remove() 
+            console.log("enemy: " + rpg.enemy)
+            console.log("player: " + rpg.player)
+        })        
+
+        .append("#charOne, #charTwo, #charThree, #charFour")
+
+// First go at a restart button 
+
+        var reset = function() {
+            rpg.initialize(); 
+
+            delete rpg.player 
+            delete rpg.enemy 
+
+            rpg.charOne = {health: 100, cntrAttck: 5, attckPwr: 8, attckPwrDef: 8}
+            rpg.charTwo = {health: 120, cntrAttck: 20, attckPwr: 6, attckPwrDef: 6}
+            rpg.charThree = {health: 150, cntrAttck: 25, attckPwr: 10, attckPwrDef: 10}
+            rpg.charFour = {health: 180, cntrAttck: 15, attckPwr: 12, attckPwrDef: 12}
+
+            $("#charOneHP").attr("id", "charOneHP")
+            $("#charOneImg").attr("id", "charOneImg")
+
+            $("#charTwoHP").attr("id", "charTwoHP")
+            $("#charTwoImg").attr("id", "charTwoImg")
+
+            $("#charThreeHP").attr("id", "charThreeHP")
+            $("#charThreeImg").attr("id", "charThreeImg")
+
+            $("#charFourHP").attr("id", "charFourHP")
+            $("#charFourImg").attr("id", "charFourImg")
+
+            $("#selectChar").css("display", "block").append($("#charOne, #charTwo, #charThree, #charFour"))
+
+            $("#selectRow").css("display", "block")
+
+            $("#logPlayerHit").text("The player's attack will be appended here.")
+
+            $("#logEnemyHit").text("The enemy's counterattack will be appended here.")
+
+            $("#enemyQueueHolder").parent().append("<h3 id='enemyQueueHolder'>Your oppenents will be listed here.</h3>")
+        }
+
+        $(".btn-danger").on("click", function() {
+            console.log("I'm here")
+            reset(); 
+        } )
+
         //Each character corresponds to an object w/ HP, counterattack, and attack properties. 
         //These properties correspond to divs that render to the page
 

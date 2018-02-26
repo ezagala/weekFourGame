@@ -22,32 +22,34 @@
                     <h2 class="align-self-center">Select your character</h2>
                     <hr>
                 </div>
-                <div id="charOne" class="char">
+                <div id="charOne">
                     <img id="charOneImg" src="assets/images/charOne.png">
                     <p class="hp">Vitality:<span id="charOneHP"></span></p>
                 </div> 
-                <div id="charTwo" class="char"> 
+                <div id="charTwo"> 
                     <img id="charTwoImg" src="assets/images/charTwo.png">
                     <p class="hp">Vitality:<span id="charTwoHP"></span></p>
                 </div>
-                <div id="charThree" class="char">
+                <div id="charThree">
                     <img id="charThreeImg" src="assets/images/charThree.png">
                     <p class="hp">Vitality:<span id="charThreeHP"></span></p>
                 </div>
-                <div id="charFour" class="char">
+                <div id="charFour">
                 <img id="charFourImg" src="assets/images/charFour.png">
                 <p class="hp">Vitality:<span id="charFourHP"></span></p>
                 </div>
             </div>
         </div>
         <!-- Game play details -->
-        <div class="d-flex flex-row">
+        <div class="d-flex flex-row justify-content-center">
             <div class="flex-column-auto" id="gameDetails">
                 <h2>Game Play</h2>
                 <hr>
-                <p class="logPlayerHit">The player's attack will be appended here.</p>
-                <p class="logEnemyHit">The enemy's counterattack will be appended here.</p>
+                <p id="logPlayerHit">The player's attack will be appended here.</p>
+                <p id="logEnemyHit">The enemy's counterattack will be appended here.</p>
                 <button type="button" class="btn btn-primary" id="attack">Attack!</button>
+                <div id="winOrLose"></div>
+                <button type="button" class="btn btn-danger ">Reset</button>
             </div>
             <!-- Protagonist rendered here when clicked -->
             <div class="flex-col" id="protagonist">
@@ -57,11 +59,11 @@
                 <div id="protag"></div>
             </div>
             <div class="col align-self-center">
-                <span><b>VS</b></span>
+                <span id="vs"><b>VS</b></span>
             </div>
             <!-- Opponent rendered here when clicked  -->
             <div class="flex-col" >
-                <h2>Opponent</h2>
+                <h2 id="opHeader">Opponent</h2>
                 <hr>
                 <!-- Selected enemy will be appended below dynamically. char included temp. for formatting -->
                 <div id="enemy"></div>
@@ -75,7 +77,8 @@
                         <hr>
                     </div>
                     <div>
-                        <h2 id="enemyQueueHolder">Your oppenents will be listed here.</h2>
+                        <h3 id="enemyQueueHolder">Your oppenents will be listed here.</h3>
+                        <span id="enemyQueue"></span>
                     </div>
                 </div>
             </div>
